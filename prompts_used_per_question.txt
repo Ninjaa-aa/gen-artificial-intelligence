@@ -1,0 +1,136 @@
+================================================================================
+PROMPTS USED — GEN AI ASSIGNMENT A02
+Plain-text log of task statements and user prompts per question.
+================================================================================
+
+--------------------------------------------------------------------------------
+QUESTION 1 — IMAGE DENOISING (DENOISING AUTOENCODER, BSDS300)
+--------------------------------------------------------------------------------
+
+--- Prompt 1.1 (initial task specification) ---
+
+Question-1: Image Denoising using Denoising Autoencoder
+In many real-world imaging applications (medical imaging, surveillance systems, satellite imagery, and mobile
+photography), images are often corrupted by noise due to sensor limitations or transmission errors. Design and
+implement a Denoising Autoencoder (DAE) capable of reconstructing clean images from noisy inputs.
+The dataset to be used for this task is "The Berkeley Segmentation Dataset and Benchmark"
+Dataset Link: https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/
+Tasks
+1. Dataset Preparation: Load the dataset, normalize the images appropriately, and prepare training,
+validation, and testing splits.
+2. Noise Injection: Artificially corrupt the training images using two types of noise:
+   • Gaussian noise
+   • Salt-and-pepper noise
+3. Denoising Autoencoder Model Design: Design and implement a convolutional denoising autoencoder
+consisting of encoder and decoder networks. Clearly describe the architecture, bottleneck size, and activation functions used.
+4. Model Training: Train the denoising autoencoder to reconstruct clean images from noisy inputs using an appropriate reconstruction loss function.
+5. Evaluation and Visualization: Evaluate the model using suitable reconstruction metrics (e.g., MSE, PSNR,
+or SSIM). Present visualization results showing:
+   • Original clean image
+   • Noisy image
+   • Reconstructed (denoised) image
+6. Experimental Study: Analyze how reconstruction performance changes with different noise levels and
+different bottleneck sizes. Summarize results in tables and figures and discuss observations.
+
+go through this in detail, search the dataset in detail, and write me a python code for it. write the most optimised code.
+I have downloaded the dataset, and attached it@BSDS300
+
+--- Prompt 1.2 (Kaggle / dataset path) ---
+
+i want to do it in kaggle, and i have uploaded the datset in DATASETS
+
+BSDS300
+
+BSDS300-images.tgz
+
+now change the code accordingly
+
+--- Prompt 1.3 (verification) ---
+
+how to see if data is loaded succefully
+
+--- Prompt 1.4 (runtime error context) ---
+
+[DEVICE] cuda
+[INFO] Running on Kaggle — input: /kaggle/input, extract & outputs: /kaggle/working
+[INFO] Kaggle — using tarball: /kaggle/input/datasets/hammad5114/bsds300/BSDS300-images.tgz
+[INFO] Extracting archive …
+---------------------------------------------------------------------------
+BadGzipFile                               Traceback (most recent call last)
+...
+ReadError: not a gzip file
+
+what is this error
+/kaggle/input/datasets/hammad5114/bsds300/BSDS300-images.tgz
+
+this is where this file si present
+
+--- Prompt 1.5 (results interpretation) ---
+
+[Paste of full training / experimental study log through DONE]
+
+go through this output, AND TELL HOW IS IT PERFROMING
+
+--- Note for Q1 ---
+
+Image-folder review (@outputs_vae) in the recorded thread applied to Question 2 (VAE), not the DAE task.
+Question 1 follow-up analysis used the training / experimental log (Prompt 1.5).
+
+================================================================================
+
+
+--------------------------------------------------------------------------------
+QUESTION 2 — GENERATIVE MODELING (VAE, FASHION-MNIST)
+--------------------------------------------------------------------------------
+
+--- Prompt 2.1 (initial task specification) ---
+
+Question-2: Generative Modeling using Variational Autoencoder (VAE)
+Generative models aim to learn the underlying data distribution so that new realistic samples can be generated.
+In this task, students will implement a Variational Autoencoder (VAE) to learn latent representations of images
+and generate new synthetic samples.
+The dataset to be used for this task is the Fashion-MNIST dataset.
+Dataset Link: Fashion-MNIST Dataset
+Tasks
+1. Dataset Preparation Load and preprocess the Fashion-MNIST dataset, including normalization and
+preparation of training, validation, and testing sets.
+2. Variational Autoencoder Architecture Design and implement a VAE consisting of:
+   • Encoder network producing latent mean (μ) and variance (σ)
+   • Reparameterization trick for latent sampling
+   • Decoder network reconstructing images from sampled latent vectors
+3. Loss Function Implementation Implement the combined loss consisting of reconstruction loss and KL-
+divergence loss.
+4. Model Training Train the VAE model and monitor both reconstruction loss and KL-divergence during training.
+5. Image Generation and Visualization Generate new images by sampling random latent vectors from the
+learned latent space. Also visualize reconstructed images alongside original images.
+6. Experimental Study Analyze the impact of different latent dimensions on reconstruction quality and
+generation capability. Present results in tables and figures and discuss observations.
+
+now write me for it, i also want to execute in kaggle, as kaggle already has added dataset in 
+/kaggle/input/datasets/hammad5114/fashion-mnist/fashionmnist
+
+so use that,
+
+--- Prompt 2.2 (results interpretation) ---
+
+[Paste of VAE training log and summary table]
+
+go through this, and tell how is it performing.
+
+--- Prompt 2.3 (figures) ---
+
+@outputs_vae these are the images, go through it
+
+--- Prompt 2.4 (figures, follow-up) ---
+
+i have pasted actual images now
+
+--- Prompt 2.5 (deliverable — this file) ---
+
+make me
+– A plain text file (.txt) containing all the prompts used for each question.
+
+
+================================================================================
+END OF FILE
+================================================================================
